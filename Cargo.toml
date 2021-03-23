@@ -54,6 +54,10 @@ status = "actively-developed"
 [badges.travis-ci]
 repository = "uuid-rs/uuid"
 
+[dependencies.bytecheck]
+optional = true
+version = "0.4"
+
 [dependencies.getrandom]
 optional = true
 version = "0.2.0"
@@ -61,6 +65,11 @@ version = "0.2.0"
 [dependencies.md5]
 optional = true
 version = "0.7"
+
+[dependencies.rkyv]
+default-features = false
+optional = true
+version = "0.4"
 
 [dependencies.serde]
 default-features = false

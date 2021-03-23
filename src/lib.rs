@@ -42,6 +42,10 @@
 //!   UUID based on the SHA1 hash of some data.
 //! * `serde` - adds the ability to serialize and deserialize a UUID using the
 //!   `serde` crate.
+//! * `bytecheck` - adds the ability to check the bytes of a UUID using the
+//!   `bytecheck` crate.
+//! * `rkyv` - adds the ability to serialize and deserialize a UUID using the
+//!   `rkyv` crates.
 //!
 //! For WebAssembly, enable one of the following features depending
 //! on your JavaScript interop toolchain of choice:
@@ -150,6 +154,10 @@ pub mod adapter;
 #[cfg(feature = "v1")]
 pub mod v1;
 
+#[cfg(feature = "bytecheck")]
+mod bytecheck_support;
+#[cfg(feature = "rkyv")]
+mod rkyv_support;
 #[cfg(feature = "serde")]
 mod serde_support;
 #[cfg(feature = "slog")]
